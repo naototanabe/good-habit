@@ -17,6 +17,8 @@
                             {!! Form::open(['route' => ['habits.destroy', $habit->id], 'method' => 'delete']) !!}
                                 {!! Form::submit('習慣削除', ['class' => 'btn btn-danger btn-sm']) !!}
                             {!! Form::close() !!}
+                            {!! link_to_route('habits.edit', 'このメッセージを編集', ['habit' => $habit->id], ['class' => 'btn btn-light']) !!}
+
                         </div>
                         @endif
                     </div>

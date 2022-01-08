@@ -8,8 +8,7 @@
                 @include('habits.form')
                 {{-- 投稿一覧 --}}
                 @include('habits.habits')
-        </div>
-
+                
     @else
         <div class="center jumbotron">
             <div class="text-center">

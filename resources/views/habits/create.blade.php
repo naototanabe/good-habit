@@ -11,7 +11,7 @@
                 
                 <div class="form-group">
                     {!! Form::label('content', '習慣:') !!}
-                    {!! Form::text('content', null, ['class' => 'form-control']) !!}
+                    {!! Form::textarea('content', "もし〇〇ならば $user->name は△△するか?", ['class' => 'form-control', 'rows' => '2']) !!}
                 </div>
 
                 {!! Form::submit('習慣を作成する！', ['class' => 'btn btn-primary']) !!}

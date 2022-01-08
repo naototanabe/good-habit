@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Habit extends Model
 {
-    protected $fillable = ['content'];
+    protected $fillable = ['content', 'user_id'];
 
     /**
      * この投稿を所有するユーザ。（ Userモデルとの関係を定義）
@@ -23,5 +23,5 @@ class Habit extends Model
     {
         return $this->belongsToMany(Habit::class, 'user_clear', 'habit_id', 'user_id')->withTimestamps();
     }
-
-}
+    
+}    

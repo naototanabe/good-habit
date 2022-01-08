@@ -16,7 +16,7 @@ Route::get('/', 'HabitsController@index');
 
 Route::group(['middleware' => ['auth']], function () {
     // 中略
-    Route::resource('habits', 'HabitsController', ['only' => ['store', 'destroy']]);
+    Route::resource('habits', 'HabitsController', ['only' => ['create', 'store', 'destroy', 'edit', 'update']]);
 });
 
 //ユーザ登録

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Habit;
+
 class HabitsController extends Controller
 {
     /**
@@ -40,6 +42,16 @@ class HabitsController extends Controller
      */
     public function create()
     {
+            $habit = new Habit;
+            $user = \Auth::user();
+        
+        
+            //タスク作成ビューを表示
+            return view('habits.create', [
+                'habit' => $habit,
+                'user' => $user,
+            ]);
+        
         
     }
     /**
@@ -50,10 +62,13 @@ class HabitsController extends Controller
      */
     public function store(Request $request)
     {
-                // バリデーション
+            
+        // バリデーション
         $request->validate([
             'content' => 'required|max:255',
         ]);
+        
+        
 
         // 認証済みユーザ（閲覧者）の投稿として作成（リクエストされた値をもとに作成）
         $request->user()->habits()->create([
@@ -61,7 +76,7 @@ class HabitsController extends Controller
         ]);
 
         // 前のURLへリダイレクトさせる
-        return back();
+        return redirect('/');
         
         
 
@@ -86,7 +101,14 @@ class HabitsController extends Controller
      */
     public function edit($id)
     {
-        //
+        // idの値で投稿を検索して取得
+        $habit = \App\Habit::findOrFail($id);
+
+        // メッセージ編集ビューでそれを表示
+        return view('habits.edit', [
+            'habit' => $habit,
+        ]);
+
     }
 
     /**
@@ -98,7 +120,15 @@ class HabitsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        // idの値でメッセージを検索して取得
+        $habit = \App\Habit::findOrFail($id);
+        // メッセージを更新
+        $habit->content = $request->content;
+        $habit->save();
+
+        // トップページへリダイレクトさせる
+        return redirect('/');
+
     }
 
     /**

@@ -13,7 +13,7 @@
                     {{-- ユーザページのリンク --}}
                     <li class="nav-item"><a href="#" class="nav-link">ユーザページ</a></li>
                     {{-- 習慣新規作成ページへのリンク --}}
-                    <li class="nav-item"><a href="#" class="nav-link">習慣新規作成</a></li>
+                    <li class="nav-item">{!! link_to_route('habits.create', '習慣新規作成', [], ['class' => 'nav-link']) !!}</li>
             </ul>   
             <ul class="navbar-nav ml-auto">
                     {{-- ログアウトへのリンク --}}
