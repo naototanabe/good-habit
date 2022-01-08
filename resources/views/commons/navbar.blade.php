@@ -15,9 +15,9 @@
                     {{-- 習慣新規作成ページへのリンク --}}
                     <li class="nav-item"><a href="#" class="nav-link">習慣新規作成</a></li>
             </ul>   
-            <ul class="navbar-nav　ml-auto">
+            <ul class="navbar-nav ml-auto">
                     {{-- ログアウトへのリンク --}}
-                    <li class="nav-item">{!! link_to_route('logout.get', 'ログアウト', ) !!}</li>
+                    <li class="nav-item">{!! link_to_route('logout.get', 'ログアウト', [],  ['class' => 'nav-link']) !!}</li>
             </ul>
             
                 
