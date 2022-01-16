@@ -19,6 +19,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('habits', 'HabitsController', ['only' => ['create', 'store', 'destroy', 'edit', 'update']]);
 });
 
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('users', 'UsersController', ['only' => ['show']]);
+});
+
 //ユーザ登録
 Route::get('signup','Auth\RegisterController@showRegistrationform')->name('signup.get');
 Route::post('signup', 'Auth\RegisterController@register')->name('signup.post');

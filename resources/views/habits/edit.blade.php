@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- ここにページ毎のコンテンツを書く -->
-    <h1> 習慣編集ページ</h1>
+    <h1 class="habit-heading"> 習慣編集</h1>
 
     
     <div class="row">
@@ -12,8 +12,8 @@
                 
                 
                 <div class='form-group'>
-                    {!! Form::label('content', '編集したい習慣') !!}
-                    {!! Form::text('content', null, ['class' => 'form-control']) !!}
+                    {!! Form::label('content', '編集したい習慣',['class' => 'form-content']) !!}
+                    {!! Form::textarea('content', null, ['class' => 'form-control habit-text', 'rows' => '2']) !!}
                 </div>
                 
                 {!! Form::submit('更新', ['class' => 'btn btn-primary']) !!}

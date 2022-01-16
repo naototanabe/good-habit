@@ -45,13 +45,10 @@ class User extends Authenticatable
         return $this->hasMany(Habit::class);
     }
     
-    public function loadRelationshipCounts()
-    {
-        $this->loadCount('habits');
-    }
+    
     
     /**
-     * このユーザが習慣達成している習慣。（ Userモデルとの関係を定義）
+     * このユーザが習慣達成している習慣。（ Habitモデルとの関係を定義）
      */
     public function clears()
     {
@@ -113,5 +110,9 @@ class User extends Authenticatable
         return $this->clears()->where('habit_id', $habitId)->exists();
     }
 
-
+    public function loadRelationshipCounts()
+    {
+        $this->loadCount('habits','clears');
+    }
+    
 }

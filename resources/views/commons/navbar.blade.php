@@ -1,5 +1,5 @@
 <header class="mb-4">
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark"style="background-color:#68a9cf;">
         {{-- トップページへのリンク --}}
         <a class="navbar-brand" href="/">Good Habit</a>
 
@@ -11,7 +11,7 @@
     @if (Auth::check())
             <ul class="navbar-nav mr-auto">
                     {{-- ユーザページのリンク --}}
-                    <li class="nav-item"><a href="#" class="nav-link">ユーザページ</a></li>
+                    <li class="nav-item">{!! link_to_route('users.show', 'ユーザページ', ['user' => Auth::id()], ['class' => 'nav-link']) !!}</li>
                     {{-- 習慣新規作成ページへのリンク --}}
                     <li class="nav-item">{!! link_to_route('habits.create', '習慣新規作成', [], ['class' => 'nav-link']) !!}</li>
             </ul>   
