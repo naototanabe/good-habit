@@ -175,3 +175,8 @@ footer {
     display: inline-block;
     margin-bottom: 50px;
 }
+
+.section-content {
+    font-size: 15px;
+    margin-top: 20px;
+}

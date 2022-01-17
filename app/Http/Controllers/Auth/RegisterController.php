@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Habit;
 
 class RegisterController extends Controller
 {
@@ -64,16 +65,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-         return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
         
-        //$name =  'name'
+         $userName = $user->name;
+         $userId = $user->id;
         
-        //return Habit::create([
-          //  'content' => 'もし家に帰ったら{{ $name }}はスクワットするか？'
-        //]);
+        
+        $user->habits()->createMany([
+        ['content' => 'もし家に帰ったら'. $userName .'はスクワットするか？'],
+        ['content' => 'もし夕食を食べたら'. $userName .'は読書するか？'],
+        ['content' => 'もし寝る前になったら'. $userName .'はスマホを見ないようにするか？'],
+        ]);
+
+        return $user;
     }
 }

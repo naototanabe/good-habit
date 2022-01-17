@@ -103,10 +103,13 @@ class HabitsController extends Controller
     {
         // idの値で投稿を検索して取得
         $habit = \App\Habit::findOrFail($id);
+        
+        $user = \Auth::user();
 
         // メッセージ編集ビューでそれを表示
         return view('habits.edit', [
             'habit' => $habit,
+            'user' => $user
         ]);
 
     }
