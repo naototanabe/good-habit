@@ -42,8 +42,8 @@
         </main>
 
     @else
-        <div class="cover-image" style="background:url(image/Good-Habit1.png); background-size:cover;">
-            <div class="text-center signin-button">
+        <h1><img src="image/Good-Habit1.png" alt"GoodHabit main-visual"></h1>
+            <div class="text-center">
                 {{-- ユーザ登録ページへのリンク --}}
                 {!! link_to_route('signup.get', 'アカウント新規作成', [], ['class' => 'btn btn-lg btn-primary']) !!}
                 {!! link_to_route('login', 'ログイン', [], ['class' => 'btn btn-lg btn-primary']) !!}

@@ -180,3 +180,8 @@ footer {
     font-size: 15px;
     margin-top: 20px;
 }
+
+.cover-image {
+    max-width: 100%;
+    width:100%;
+}
