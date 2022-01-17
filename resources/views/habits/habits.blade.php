@@ -2,7 +2,6 @@
     <ul class="list-unstyled row">
         @foreach ($habits as $habit)
             <li class="media mb-3 col-sm-4">
-                
                 <div class="media-body">
                     <span class="box-title">習慣</span>
 
@@ -25,7 +24,6 @@
                         </div>
                         @endif
                     </div>
-
                 </div>
             </li>
         @endforeach

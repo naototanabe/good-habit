@@ -19,8 +19,7 @@ class HabitsController extends Controller
         if (\Auth::check()) { // 認証済みの場合
             // 認証済みユーザを取得
             $user = \Auth::user();
-            // ユーザの投稿の一覧を作成日時の降順で取得
-            // （後のChapterで他ユーザの投稿も取得するように変更しますが、現時点ではこのユーザの投稿のみ取得します）
+            // ユーザの習慣の一覧を作成日時の降順で取得
             $habits = $user->habits()->orderBy('created_at', 'desc')->paginate(10);
 
             $data = [
@@ -46,7 +45,7 @@ class HabitsController extends Controller
             $user = \Auth::user();
         
         
-            //タスク作成ビューを表示
+            //習慣作成ビューを表示
             return view('habits.create', [
                 'habit' => $habit,
                 'user' => $user,
@@ -70,7 +69,7 @@ class HabitsController extends Controller
         
         
 
-        // 認証済みユーザ（閲覧者）の投稿として作成（リクエストされた値をもとに作成）
+        // 認証済みユーザ（閲覧者）の習慣として作成（リクエストされた値をもとに作成）
         $request->user()->habits()->create([
             'content' => $request->content,
         ]);
@@ -101,7 +100,7 @@ class HabitsController extends Controller
      */
     public function edit($id)
     {
-        // idの値で投稿を検索して取得
+        // idの値で習慣を検索して取得
         $habit = \App\Habit::findOrFail($id);
         
         $user = \Auth::user();
@@ -123,7 +122,7 @@ class HabitsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // idの値でメッセージを検索して取得
+        // idの値で習慣を検索して取得
         $habit = \App\Habit::findOrFail($id);
         // メッセージを更新
         $habit->content = $request->content;
@@ -142,10 +141,10 @@ class HabitsController extends Controller
      */
     public function destroy($id)
     {
-        // idの値で投稿を検索して取得
+        // idの値で習慣を検索して取得
         $habit = \App\Habit::findOrFail($id);
 
-        // 認証済みユーザ（閲覧者）がその投稿の所有者である場合は、投稿を削除
+        // 認証済みユーザ（閲覧者）がその習慣の所有者である場合は、習慣を削除
         if (\Auth::id() === $habit->user_id) {
             $habit->delete();
         }

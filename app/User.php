@@ -38,7 +38,7 @@ class User extends Authenticatable
     ];
     
     /**
-     * このユーザが所有する投稿。（ Habitモデルとの関係を定義）
+     * このユーザが所有する習慣。（ Habitモデルとの関係を定義）
      */
     public function habits()
     {
