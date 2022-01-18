@@ -1,5 +1,5 @@
 <header class="mb-4">
-    <nav class="navbar navbar-expand-sm navbar-dark"style="background-color:#68a9cf;">
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-top "style="background-color:#68a9cf;">
         {{-- トップページへのリンク --}}
         <a class="navbar-brand" href="/">Good Habit</a>
 
