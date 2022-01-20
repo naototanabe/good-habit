@@ -38,5 +38,17 @@ class UsersController extends Controller
         return view('users.show', $data);
     }
     
+    public function destroy($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+        return redirect('/');
+    }
+
+    public function delete_confirm()
+    {
+        return view('users.delete_confirm');
+    }
+    
     
 }

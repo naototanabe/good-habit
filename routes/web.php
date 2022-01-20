@@ -20,8 +20,10 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::resource('users', 'UsersController', ['only' => ['show']]);
+    Route::resource('users', 'UsersController', ['only' => ['show', 'destroy']]); //destroy追加
+    Route::get('users','UsersController@delete_confirm')->name('users.delete_confirm');
 });
+
 
 //ユーザ登録
 Route::get('signup','Auth\RegisterController@showRegistrationform')->name('signup.get');
