@@ -1,80 +1,59 @@
 @charset "UTF-8";
-
 /* 背景の色 */
-
 /* 枠やフッターの色 */
-
 /*全体の設定 */
-
 body {
   width: 984px;
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-  background-color: #f7f6f5;
-}
+  background-color: #f7f6f5; }
 
 img {
   width: 100%;
-  height: auto;
-}
+  height: auto; }
 
 footer {
   width: 984px;
   max-width: 100%;
   height: 100px;
   background-color: #68a9cf;
-  margin-top: 30px;
-}
+  margin-top: 30px; }
 
 /* ナビゲーションバー */
-
 .navbar-brand {
-  font-family: Great Vibes;
-}
+  font-family: Great Vibes; }
 
 .nav-item {
-  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
-}
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif; }
 
 /* トップページ */
-
 .heading {
   font-size: 32px;
-  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  margin-bottom: 50px;
-}
-
-.heading:before,
-.heading:after {
-  width: 50px;
-  height: 6px;
-  content: "";
-  border-top: solid 2px #000;
-  border-bottom: solid 2px #000;
-}
-
-.heading:before {
-  left: 20px;
-}
-
-.heading:after {
-  right: 20px;
-}
+  margin-bottom: 50px; }
+  .heading:before, .heading:after {
+    width: 50px;
+    height: 6px;
+    content: '';
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000; }
+  .heading:before {
+    left: 20px; }
+  .heading:after {
+    right: 20px; }
 
 /*ページ下部のコンテント */
-
 .heading-content {
   font-size: 18px;
   font-weight: bold;
   padding: 1rem 1rem;
   margin: 0 0 40px 0;
-  border-left: 3px solid #68a9cf;
-}
+  border-left: 3px solid #68a9cf; }
 
 .text-content {
   font-size: 15px;
@@ -85,34 +64,26 @@ footer {
   border: solid 3px #68a9cf;
   /*線*/
   border-radius: 10px;
-  /*角の丸み*/
-}
+  /*角の丸み*/ }
 
 /* ログイン前トップページ */
-
 .cover-image {
   height: 400px;
-  margin: 30px 0;
-}
+  margin: 30px 0; }
 
 .signin-button {
-  padding-top: 320px;
-}
+  padding-top: 320px; }
 
 /* 習慣内容 */
-
 .media-body {
   position: relative;
   margin: 1em 0;
   padding: 0.5em 1em;
   border: solid 3px #68a9cf;
-  border-radius: 8px;
-}
-
-.media-body p {
-  margin: 0;
-  padding: 0;
-}
+  border-radius: 8px; }
+  .media-body p {
+    margin: 0;
+    padding: 0; }
 
 .box-title {
   position: absolute;
@@ -124,70 +95,55 @@ footer {
   font-size: 19px;
   background: #f7f6f5;
   color: #68a9cf;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 /* ボタン */
-
 .btn {
-  border-radius: 7px;
-}
+  border-radius: 7px; }
 
 /* フッター */
-
 .footer-link {
   font-family: Great Vibes;
   color: white;
   font-size: 24px;
-  padding: 20px 10px;
-}
-
-.footer-link:hover {
-  color: white;
-  text-decoration: none;
-}
+  padding: 20px 10px; }
+  .footer-link:hover {
+    color: white;
+    text-decoration: none; }
 
 /*習慣新規作成ページ*/
-
 .habit-heading {
   font-size: 32px;
   border-left: 3px solid #68a9cf;
-  padding: 1rem 1rem;
-}
+  padding: 1rem 1rem; }
 
 .form-content {
   font-size: 24px;
-  margin: 10px 0 0 0;
-}
+  margin: 10px 0 0 0; }
 
 .habit-text {
   border: solid 3px #68a9cf;
   color: black;
   background: #f7f6f5;
-  margin: 20px 0 0 0;
-}
+  margin: 20px 0 0 0; }
 
 .habits-clear {
   font-size: 20px;
-  float: right;
-}
+  float: right; }
 
 .show-heading {
   font-size: 32px;
   border-left: 3px solid #68a9cf;
   padding: 1rem 1rem;
   display: inline-block;
-  margin-bottom: 50px;
-}
+  margin-bottom: 50px; }
 
 .section-content {
   font-size: 15px;
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 .twitter-btn {
   display: flex;
-  justify-content: right;
-}
+  justify-content: right; }
 
-
+/*# sourceMappingURL=style.css.map */

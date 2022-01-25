@@ -42,6 +42,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
     margin-bottom: 50px;
 
     &:before,&:after {
@@ -172,4 +173,9 @@ footer {
 .section-content {
     font-size: 15px;
     margin-top: 20px;
+}
+
+.twitter-btn {
+    display: flex;
+    justify-content: right;
 }

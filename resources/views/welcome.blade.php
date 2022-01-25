@@ -12,7 +12,11 @@
                     {{-- 投稿一覧 --}}
                     @include('habits.habits')
                 </div> 
-                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="本日の習慣を達成しました！" data-url="https://good-habit-jp.herokuapp.com/" data-hashtags="goodhabit" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                
+                <div class="twitter-btn">
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="本日の習慣を達成しました！" data-url="https://good-habit-jp.herokuapp.com/" data-hashtags="goodhabit" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+                        
                 <h2 class="heading">続かなかった習慣が続く習慣に</h2>
             
                 <div class="container">
